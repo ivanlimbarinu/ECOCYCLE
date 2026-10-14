@@ -1,0 +1,370 @@
+.page {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--neutral-100);
+  font-family: var(--font-family);
+  overflow: hidden;
+}
+
+/* Pannello Sinistro Brand */
+.leftPanel {
+  flex: 1;
+  background: var(--primary-900);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  padding: var(--space-8);
+  overflow: hidden;
+}
+
+.circleBg1 {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 60vh;
+  height: 60vh;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.circleBg2 {
+  position: absolute;
+  bottom: -15%;
+  right: -5%;
+  width: 70vh;
+  height: 70vh;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.brandContainer {
+  z-index: 2;
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.mainLogo {
+  width: 140px;
+  height: auto;
+  margin-bottom: var(--space-4);
+}
+
+.brandTitle {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+  color: var(--white);
+}
+
+.brandSubtitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary-200);
+  letter-spacing: 2px;
+  margin-bottom: var(--space-1);
+}
+
+.brandTagline {
+  font-size: 16px;
+  color: var(--neutral-300);
+}
+
+.featuresList {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 320px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: rgba(255, 255, 255, 0.1);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-btn);
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footerCopy {
+  position: absolute;
+  bottom: var(--space-6);
+  z-index: 2;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Pannello Destro Form */
+.rightPanel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--neutral-100);
+  position: relative;
+}
+
+
+.rightPanel::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 300px;
+  height: 300px;
+  background: var(--primary-50);
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.rightPanel::after {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  width: 250px;
+  height: 250px;
+  background: var(--primary-50);
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.loginCard {
+  position: relative;
+  z-index: 10;
+  background: var(--white);
+  padding: var(--space-8);
+  border-radius: var(--radius-sheet);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 440px;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.formTitle {
+  text-align: center;
+  margin-bottom: var(--space-6);
+  color: var(--neutral-900);
+  font-size: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--neutral-700);
+}
+
+.labelError {
+  color: var(--color-error);
+}
+
+.input {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-btn);
+  font-size: 16px;
+  outline: none;
+  transition: all 0.2s ease;
+  background: var(--white);
+  color: var(--neutral-900);
+}
+
+.input::placeholder {
+  color: var(--neutral-300);
+}
+
+.input:focus {
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px var(--primary-50);
+}
+
+.inputError {
+  border-color: var(--color-error) !important;
+}
+
+.inputError:focus {
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1) !important;
+  border-color: var(--color-error) !important;
+}
+
+.passwordWrapper {
+  position: relative;
+  display: flex;
+}
+
+.passwordWrapper .input {
+  width: 100%;
+  padding-right: 48px;
+}
+
+.toggleVisibility {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--neutral-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.toggleVisibility:hover {
+  color: var(--neutral-700);
+}
+
+.errorLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-error);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.hintText {
+  color: var(--neutral-500);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.rememberRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 14px;
+  color: var(--neutral-700);
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary-700);
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.submitBtn {
+  background: var(--primary-700);
+  color: var(--white);
+  padding: var(--space-3) var(--space-4);
+  border: none;
+  border-radius: var(--radius-btn);
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: var(--space-2);
+  transition: background 0.2s ease, transform 0.1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: var(--primary-800);
+  transform: translateY(-1px);
+}
+
+.submitBtn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.submitBtn:disabled {
+  background: var(--neutral-300);
+  cursor: not-allowed;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: var(--space-6) 0;
+  color: var(--neutral-500);
+  font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--neutral-300);
+}
+
+.divider span {
+  padding: 0 var(--space-3);
+}
+
+.socialRow {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.socialBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--white);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-btn);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--neutral-700);
+  transition: background 0.2s ease;
+}
+
+.socialBtn:hover {
+  background: var(--neutral-100);
+}
+
+@media (max-width: 900px) {
+  .leftPanel {
+    display: none;
+  }
+
+  .loginCard {
+    margin: var(--space-4);
+  }
+}
